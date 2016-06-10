@@ -23,7 +23,8 @@ When you checkout the project from the repo you need to do the following things:
 Starting in the project directory run:
 `copy Homestead.yaml.example Homestead.yaml`
 then edit `Homestead.yaml` and fill your local/prefered settings, then
-```composer install
+```
+composer install
 cd public
 npm install
 cd ..\_lottery_draw
