@@ -20,7 +20,9 @@ Software you need:
 More information on how to install Homestead: `https://laravel.com/docs/5.2/homestead`
 
 When you checkout the project from the repo you need to do the following things:
+
 Starting in the project directory run:
+
 `copy Homestead.yaml.example Homestead.yaml`
 then edit `Homestead.yaml` and fill your local/prefered settings, then
 ```
@@ -32,9 +34,11 @@ npm install
 ```
 
 after that you are ready to run the vagrant box by typing in the project dir:
+
 `vagrant up`
 
 you also need to configure your local environment
+
 copy `.env.example` file to `.env` and then edit it to your local config.
 
 The node.js app within the `_lottery_draw` folder gets it's settings from the project's `.env` file. This small app is required to run for the project to work correctly.
