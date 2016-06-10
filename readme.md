@@ -1,6 +1,7 @@
 # Lottery Sample App
 
-This web app presents a list of lotteries which a user is able to participate.
+This web app is a simple lottery system in which someone can participate in one or more of them. 
+It presents a list of lotteries which a user is able to participate.
 The user is required to make an account using his email address and a mobile phone number. Upon entering the details an activation email is sent and the user can use the provided link to activate the account.
 Once the user account is activated the user can choose one or more lotteries to participate in. When the user joins a lottery, he is automatically assigned with a unique ticket number.
 When the draw date of the lottery elapses if the user has won he is notified by email and sms. If at the time of the draw the user is logged in the site, an automated animation of the current draw occurs.
