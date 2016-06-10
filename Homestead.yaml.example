@@ -12,18 +12,12 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: "D:/Projects/Personal/Lottery"
+    - map: "D:/Test/SampleLotteryApp"
       to: "/home/vagrant/lottery"
-
-    - map: "D:/Projects/Personal/LotteryAdmin"
-      to: "/home/vagrant/lottery_admin"
 
 sites:
     - map: lottery.dev
       to: "/home/vagrant/lottery/public"
-
-    - map: lottery.adm
-      to: "/home/vagrant/lottery_admin/public"
 
 databases:
     - homestead

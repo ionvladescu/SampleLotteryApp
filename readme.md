@@ -12,6 +12,7 @@ Software you need:
 
 * Oracle VM VirtualBox `https://www.virtualbox.org/`
 * Vagrant `https://www.vagrantup.com/`
+* PHP >= 5.5.9 `https://www.php.net/`
 * Composer `https://getcomposer.org/`
 * Node.js `https://nodejs.org`
 * git `https://git-scm.com/`
@@ -20,4 +21,17 @@ More information on how to install Homestead: `https://laravel.com/docs/5.2/home
 
 When you checkout the project from the repo you need to do the following things:
 Starting in the project directory run:
-`composer install`
+`copy Homestead.yaml.example Homestead.yaml`
+then edit `Homestead.yaml` and fill your local/prefered settings, then
+```composer install
+cd public
+npm install
+cd ..\_lottery_draw
+npm install
+```
+
+after that you are ready to run the vagrant box by typing in the project dir:
+`vagrant up`
+
+you also need to configure your local environment
+copy `.env.example` file to `.env` and then edit it to your local config.
