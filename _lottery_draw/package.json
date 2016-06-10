@@ -1,0 +1,21 @@
+{
+    "name": "lottery-draw",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Lottery Draw",
+    "author": "Manolis Koukopoulos <mkmoss.gr@gmail.com>",
+    "dependencies": {
+        "bookshelf": "0.7.x",
+        "knex": "0.6.x",
+        "express": "3.x",
+        "mysql": "2.x",
+        "q": "*",
+        "socket.io": "1.x",
+        "lodash": ">=2.x",
+        "moment": "*",
+        "request": "*",
+        "obs": "*",
+        "dotenv": "*"
+    },
+    "devDependencies": { }
+}

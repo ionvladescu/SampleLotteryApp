@@ -1,0 +1,40 @@
+<md-dialog id="lottery-dialog" ng-cloak>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>{{lottery.title}}</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="closeDialog()">
+                <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-toolbar class="md-tall md-accent md-hue-2" layout-align="center center" layout-fill layout="column">
+        <span>Lottery Draw!</span>
+        <ul class="lottery-draw">
+            <li>{{curDraw[0]}}</li>
+            <li>{{curDraw[1]}}</li>
+            <li>{{curDraw[2]}}</li>
+        </ul>
+    </md-toolbar>
+    <md-subheader layout="row" class="md-accent" ng-if="lottery.ticket_won || lottery.ticket_num">
+        <span ng-if="lottery.ticket_num && !lottery.ticket_won">Your ticket: {{lottery.ticket_num}}</span>
+        <span ng-if="lottery.ticket_num && lottery.ticket_won">
+            {{ (lottery.ticket_num == lottery.ticket_won) ? "YOU WON THIS LOTTERY!" : "You didn't win this one."}}
+        </span>
+    </md-subheader>
+    <md-dialog-content layout-gt-md="row" layout="column">
+        <img style="margin: auto; max-width: 100%;" ng-src="{{lottery.image_url}}" alt="{{lottery.title}}">
+        <div class="md-dialog-content">
+            {{lottery.description}}
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+        <span flex></span>
+        <md-button ng-click="closeDialog()">
+            Close
+        </md-button>
+        <md-button ng-disabled="lottery.ticket_num" class="md-primary" ng-click="join()">
+            Join
+        </md-button>
+    </md-dialog-actions>
+</md-dialog>

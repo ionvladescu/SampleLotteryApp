@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "angular": "1.5.*",
+    "angular-animate": "1.5.*",
+    "angular-aria": "1.5.*",
+    "angular-cookies": "1.5.*",
+    "angular-material": "1.1.0-rc.5",
+    "angular-resource": "1.5.*",
+    "angular-route": "1.5.*",
+    "angular-sanitize": "1.5.*",
+    "angular-touch": "1.5.*",
+    "lodash": "4.*",
+    "moment": "2.*",
+    "moment-duration-format": "1.*"
+  }
+}

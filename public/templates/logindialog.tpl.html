@@ -1,0 +1,22 @@
+<md-dialog aria-label="List dialog" flex-xl="40" flex-lg="40" flex-md="60" flex="80">
+<form name=loginForm>
+        <md-dialog-content layout-padding>
+            <div layout="column" flex>
+                <md-input-container class="md-block">
+                    <label>Email</label>
+                    <input name="email" ng-model="login.email" required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                    <div class="hint" ng-show="showHints">Your email address.</div>
+                </md-input-container>
+                <md-input-container class="md-block" flex>
+                    <label>Password</label>
+                    <input type="password" name="password" required ng-model="login.password" ng-minlength="4">
+                    <div class="hint" ng-show="showHints">Type your password.</div>
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions>
+            <md-button ng-click="closeDialog()">Cancel</md-button>
+            <md-button ng-click="loginSubmit()" class="md-primary" type="submit" ng-disabled="submitDisable">Login</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

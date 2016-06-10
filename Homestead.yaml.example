@@ -1,0 +1,47 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+hostname: lottery
+name: lottery
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: "D:/Projects/Personal/Lottery"
+      to: "/home/vagrant/lottery"
+
+    - map: "D:/Projects/Personal/LotteryAdmin"
+      to: "/home/vagrant/lottery_admin"
+
+sites:
+    - map: lottery.dev
+      to: "/home/vagrant/lottery/public"
+
+    - map: lottery.adm
+      to: "/home/vagrant/lottery_admin/public"
+
+databases:
+    - homestead
+
+variables:
+    - key: APP_ENV
+      value: local
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+ports:
+    - send: 9001
+      to: 9001
+      protocol: tcp
+#     - send: 77
+#       to: 777
+#       protocol: udp

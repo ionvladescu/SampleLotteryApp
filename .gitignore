@@ -1,0 +1,14 @@
+vendor
+node_modules
+public/storage
+public/node_modules
+_lottery_draw/node_modules
+.env
+.idea
+.vagrant
+_temp
+
+Homestead.yaml
+Homestead.json
+cmds.txt
+composer.lock

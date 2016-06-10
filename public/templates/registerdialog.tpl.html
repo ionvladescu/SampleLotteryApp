@@ -1,0 +1,35 @@
+<md-dialog aria-label="List dialog" flex-xl="40" flex-lg="40" flex-md="60" flex="80">
+<form name="regForm">
+        <md-dialog-content layout-padding>
+            <div layout="column" flex>
+
+                <md-input-container class="md-block" flex>
+                    <label>Password</label>
+                    <input type="password" name="password" ng-required="true" ng-model="form.password" ng-change="checkPassword()" ng-minlength="4" placeholder="password (4 characters minimum)">
+                    <div class="hint" ng-show="showHints">Type a password.</div>
+                </md-input-container>
+                <md-input-container class="md-block" flex>
+                    <label>Repeat Password</label>
+                    <input type="password" name="passwordB" ng-required="true" ng-model="form.passwordB" ng-change="checkPassword()" ng-minlength="4" placeholder="password (4 characters minimum)">
+                    <div class="hint" ng-show="showHints">Repeat your password.</div>
+                </md-input-container>
+                <md-input-container class="md-block" flex>
+                    <label>First Name</label>
+                    <input type="text" name="firstname" ng-model="form.firstname">
+                    <div class="hint" ng-show="showHints">Your first name</div>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex>
+                    <label>Last Name</label>
+                    <input type="text" name="lastname" ng-model="form.lastname">
+                    <div class="hint" ng-show="showHints">Your last name</div>
+                </md-input-container>
+
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions>
+            <md-button ng-click="closeDialog()">Cancel</md-button>
+            <md-button ng-click="sendRegistration()" class="md-primary" type="submit" ng-disabled="register.submitDisable">Complete Registration</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
