@@ -36,3 +36,10 @@ after that you are ready to run the vagrant box by typing in the project dir:
 
 you also need to configure your local environment
 copy `.env.example` file to `.env` and then edit it to your local config.
+
+The node.js app within the `_lottery_draw` folder gets it's settings from the project's `.env` file. This small app is required to run for the project to work correctly.
+
+You can ssh in to the vagrant box and run the node app from there.
+
+
+
