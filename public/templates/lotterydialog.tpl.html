@@ -8,7 +8,7 @@
             </md-button>
         </div>
     </md-toolbar>
-    <md-toolbar class="md-tall md-accent md-hue-2" layout-align="center center" layout-fill layout="column">
+    <md-toolbar ng-if="lottery.draw_enable" class="md-tall md-accent md-hue-2" layout-align="center center" layout-fill layout="column">
         <span>Lottery Draw!</span>
         <ul class="lottery-draw">
             <li>{{curDraw[0]}}</li>
